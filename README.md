@@ -44,14 +44,14 @@ For three super hard maps: 3s5z_vs_3s6z,6h_vs_8z,corridor in SMAC, we use fine t
 
 We provide two ways to run experiments.
 
-####1.  Use bash file
+#### 1.  Use bash file
 We recommand to run experiments by this way. Just replace the default "tasks" and "algos" with your desired ones in EMC/pymarl/src/run_curiosity_test.sh, and then: 
 ```shell
     cd pymalr/src
     bash run_curiosity_test.sh
 ```
 
-####2. Use command line.
+#### 2. Use command line.
 For example, to train EMC on didactic task `gridworld `, run the following command:
 
 ```shell
