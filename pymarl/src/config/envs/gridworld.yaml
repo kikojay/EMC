@@ -1,0 +1,21 @@
+env: gridworld
+env_args:
+  input_rows: 9
+  input_cols: 12
+  map_name: "reversed"
+  penalty: True
+  penalty_amount: 0.5
+  path: Null
+
+learner_log_interval: 1000
+log_interval: 1000
+runner_log_interval: 1000
+t_max: 105000
+test_interval: 1000
+test_nepisode: 30
+test_greedy: True
+demo_interval: 1000
+
+save_model: True
+use_tensorboard: True
+save_model_interval: 20000

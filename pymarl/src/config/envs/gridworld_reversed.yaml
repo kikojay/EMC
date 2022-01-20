@@ -1,0 +1,24 @@
+env: gridworld
+env_args:
+  episode_limit: 30
+  input_rows: 11
+  input_cols: 12
+  map_name: "reversed"
+  penalty: True
+  penalty_amount: 2
+  path: Null
+  noise: False
+  noise_num: 10
+
+learner_log_interval: 1000
+log_interval: 1000
+runner_log_interval: 1000
+t_max: 505000
+test_interval: 1000
+test_nepisode: 30
+test_greedy: True
+demo_interval: 1000
+
+save_model: False
+use_tensorboard: True
+save_model_interval: 20000
