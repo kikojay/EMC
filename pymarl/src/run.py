@@ -177,7 +177,10 @@ def run_sequential(args, logger):
         runner.setup(scheme=scheme, groups=groups, preprocess=preprocess, mac=mac)
 
     # Learner
-    learner = le_REGISTRY[args.learner](mac, buffer.scheme, logger, args, groups=groups)
+    if args.learner=="fast_QLearner" or "qplex_curiosity_vdn_learner":
+        learner = le_REGISTRY[args.learner](mac, buffer.scheme, logger, args, groups=groups)
+    else:
+        learner = le_REGISTRY[args.learner](mac, buffer.scheme, logger, args)
 
     if args.runner == 'offpolicy':
         runner.setup(scheme=scheme, groups=groups, preprocess=preprocess, mac=mac, test_mac=learner.extrinsic_mac)
