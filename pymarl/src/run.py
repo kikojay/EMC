@@ -177,7 +177,7 @@ def run_sequential(args, logger):
         runner.setup(scheme=scheme, groups=groups, preprocess=preprocess, mac=mac)
 
     # Learner
-    if args.learner=="fast_QLearner" or "qplex_curiosity_vdn_learner":
+    if args.learner=="fast_QLearner" or args.learner=="qplex_curiosity_vdn_learner":
         learner = le_REGISTRY[args.learner](mac, buffer.scheme, logger, args, groups=groups)
     else:
         learner = le_REGISTRY[args.learner](mac, buffer.scheme, logger, args)
